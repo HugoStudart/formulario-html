@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body::before {
   content: '';
   width: 100%;
@@ -8,6 +14,16 @@ body::before {
   z-index: -1;
   background: #121214;
 }
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: #e5e5e5;
+}
 .page {
   width: 736px;
   margin: auto;
@@ -15,17 +31,13 @@ body::before {
 header {
   width: 319px;
 }
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 header h1 {
   font-family: 'Archivo', sans-serif;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   color: white;
+  margin-bottom: 24px;
 }
 header p {
   font-size: 16px;
@@ -42,6 +54,11 @@ form {
 fieldset {
   border: none;
 }
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 fieldset legend {
   font-family: 'Archivo', sans-serif;
   font-weight: 600;
@@ -50,4 +67,64 @@ fieldset legend {
   width: 100%;
   border-bottom: 1px solid #e6e6f0;
   padding-bottom: 16px;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+  margin-bottom: 8px;
+}
+.input-wrapper label span {
+  margin-left: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #aba9b2;
+}
+.input-wrapper label span:hover {
+  color: #6c6a71;
+}
+.input-wrapper input,
+.input-wrapper textarea {
+  background: #fafafc;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6a71;
+}
+.input-wrapper textarea {
+  padding: 0 10px;
+  height: 168px;
+}
+.input-whatsapp {
+  display: flex;
+  flex-direction: column;
+}
+.input-whatsapp label {
+  color: #4e4958;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.input-whatsapp label span {
+  margin-left: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #c1bccc;
+}
+.input-whatsapp input {
+  background: #fafafc;
+  border: 1px solid #ff1010;
+  border-radius: 8px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #c1bccc;
 }
